@@ -24,6 +24,8 @@ export class AuthorsComponent implements OnInit {
     if ($event.keyCode === 13) console.log('Enter was pressed');
   }
 
+  text =
+    'dxfcvgh asdsfg afdsgdf dadfsgd afdsgd afdsgd adfsdg dafsgdh dafsgdadfsgd afdsgd afdsgd adfsdg dafsgdh dafsgddadfsgd afdsgd afdsgd adfsdg dafsgdh dafsgddadfsgd afdsgd afdsgd adfsdg dafsgdh dafsgdd sdfsgd sdf SDAFSD ER  ASFD SADFSGD';
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
   }

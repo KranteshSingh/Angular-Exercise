@@ -19,6 +19,14 @@ export class FruitsComponent implements OnInit {
     console.log(this.name);
   }
 
+  course = {
+    title: 'The complete Fundamentals of Angualr',
+    rating: 4.9754,
+    students: 301457,
+    price: 198.84,
+    releaseDate: new Date(2019, 5, 6)
+  };
+
   constructor(fruitservice: FruitsService) {
     this.allFruits = fruitservice.allFruits;
   }

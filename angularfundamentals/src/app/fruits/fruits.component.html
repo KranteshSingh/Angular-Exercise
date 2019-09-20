@@ -11,3 +11,10 @@
 <br>
 <!-- Two Way Binding -->
 <input [(ngModel)]="name" (keyup.enter)="onKeyClick()">
+
+<h3>Course Details using Angular Pipes</h3><br>
+{{course.title | uppercase}}<br>
+{{course.rating | number:'1.2'}}<br>
+{{course.students | number}}<br>
+{{course.price | currency:'INR'}}<br>
+{{course.releaseDate | date:'shortDate'}}<br>

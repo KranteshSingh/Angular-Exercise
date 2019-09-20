@@ -9,10 +9,28 @@
             <kbd>AUTHOR COMPONENT</kbd>
             <app-authors></app-authors>
         </div>
-        <div class=col-md-1></div>
+
+        <div class=col-md-2>
+            <kbd>FAV COMPONENT</kbd>
+            <app-favourite></app-favourite>
+        </div>
         <div class=col-md-5>
             <kbd>FRUITS COMPONENT</kbd>
             <app-fruits></app-fruits>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class=col-md-12>
+            <kbd>APP COMPONENT</kbd>
+            <br>
+            <br><br>
+            <input type='text' [(ngModel)]="title">
+            <br>
+            {{title | titleCase}}
         </div>
     </div>
 </div>
