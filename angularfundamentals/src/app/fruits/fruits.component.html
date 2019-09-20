@@ -1,4 +1,13 @@
 <h2>We have {{allFruits.length}} Fruits</h2>
 <ul>
-    <li *ngFor='let fruit of allFruits'>{{fruit}}</li>
+    <li *ngFor='let fruit of allFruits'>{{fruit | uppercase}}</li>
 </ul>
+
+<input #email (keyup.enter)='onKeyUp(email.value)'>
+
+<br>
+<br>
+<br>
+<br>
+<!-- Two Way Binding -->
+<input [(ngModel)]="name" (keyup.enter)="onKeyClick()">

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class FruitsService {
   allFruits = [
     'mango',
-    'ápple',
+    'apple',
     'banana',
     'orange',
     'guava',

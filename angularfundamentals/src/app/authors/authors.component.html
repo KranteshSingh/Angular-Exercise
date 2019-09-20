@@ -1,38 +1,48 @@
-<h3>{{authors.length}} Authors</h3>
-
+<h3>Top {{authors.length}} Authors</h3>
 <ul>
-    <li *ngFor='let author of authors'>{{author}}</li>
+    <li *ngFor='let author of authors'>{{author| uppercase}}</li>
 </ul>
-
-<kbd>Property Binding works one way - from Angular Component to DOM</kbd>
+<q>Property Binding works 1 way - from Angular Component to DOM</q>
 <br>
 <br>
 <br>
-
 <img src="{{imageUrl}}" alt="Krantesh Singh">
-
 <br>
 <br>
 <br>
 <table style="border: 2px solid black;">
     <tr>
-        <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
+        <td [attr.colspan]='colSpan'>1</td>
+        <td [attr.colspan]='colSpan'>2</td>
+        <td [attr.colspan]='colSpan'>3</td>
     </tr>
     <tr>
+        <td [attr.colspan]='colSpan'>4</td>
         <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
+        <td [attr.colspan]='colSpan'>6</td>
     </tr>
     <tr>
-        <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
-        <td [attr.colspan]='colSpan'>5</td>
+        <td [attr.colspan]='colSpan'>7</td>
+        <td [attr.colspan]='colSpan'>8</td>
+        <td [attr.colspan]='colSpan'>9</td>
     </tr>
 </table>
 
 <br>
 <br>
 
-<button class="btn btn-large btn-info">CLICK ME</button>
+<!-- Class Binding -->
+<button class="btn btn-large btn-info" [class.active]='isActive'>CLICK ME</button>
+<br>
+<br>
+<!-- Style Binding -->
+<button class="btn btn-large btn-info" [style.backgroundColor]="isActive ? 'blue': 'white'">CLICK ME</button>
+<br>
+<br>
+<!-- Event Binding -->
+<button class="btn btn-danger" (click)='onSave($event)'>Save My Details</button>
+<br>
+<br>
+<br>
+<!-- Event Filtering -->
+<input (keyup)='onKeyUp($event)' />

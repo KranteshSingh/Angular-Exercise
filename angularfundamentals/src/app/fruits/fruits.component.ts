@@ -8,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FruitsComponent implements OnInit {
   allFruits;
+  name = 'krantesh';
+  email;
+  onKeyUp(email) {
+    console.log(email);
+  }
+
+  // Two way Binding
+  onKeyClick() {
+    console.log(this.name);
+  }
+
   constructor(fruitservice: FruitsService) {
     this.allFruits = fruitservice.allFruits;
   }
